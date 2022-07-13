@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Koulen&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Koulen";
+    background-color: #090133;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: Josefin Sans;
+    font-weight: 500;
+    position: relative;
+    top: 1%;
+    color: wheat;
+    left: 0;
+    margin-top: 100px;
+    margin-left: 90px;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    min-height: 100vh;
+    padding: 50px;
+    padding-top: 40px;
+
+}
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    flex: 0.2;
+    margin: 10px;
+    padding-top: 40px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+
+    
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    background-color: #2E045C;
+    border-radius: 20%;
+    padding: 10px 15px;
+}
+
+.panel.active {
+    flex: 5;
+    height: 85vh;
+    position: relative;
+
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px){
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
+
+nav {
+    font-size: 1.5em;
+    height: 60px;
+    position: absolute;
+    top: 0.5px;
+    left: 2px;
+}
+ul li {
+    display: inline;
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
